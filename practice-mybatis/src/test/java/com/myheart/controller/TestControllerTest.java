@@ -1,6 +1,7 @@
 package com.myheart.controller;
 
 import com.myheart.MybatisBootApplication;
+import com.myheart.caiwu.ITestService;
 import com.myheart.caiwu.mappers.CoreProductGroupMapper;
 import mockit.Injectable;
 import mockit.Tested;
@@ -22,6 +23,8 @@ public class TestControllerTest {
     private TestController testController;
     @Injectable
     private CoreProductGroupMapper coreProductGroupMapper;
+    @Injectable
+    private ITestService testService;
 
     @Test
     public void testTestMybatisEntrance() throws Exception {
