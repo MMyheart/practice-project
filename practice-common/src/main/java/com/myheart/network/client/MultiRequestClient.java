@@ -18,7 +18,7 @@ public class MultiRequestClient {
             e.printStackTrace();
         }
         final SocketAddress socketAddress = new InetSocketAddress(address,8080);
-        for (int i = 0; i < 150; i++){
+        for (int i = 0; i < 1; i++){
             Thread thread = new Thread(new Runnable() {
                 @Override
                 public void run() {
@@ -37,26 +37,26 @@ public class MultiRequestClient {
             });
             thread.start();
         }
-
-        try {
-            Thread.sleep(60000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        System.out.println("准备发送结束");
-        SocketAddress socketAddress1 = new InetSocketAddress(address,9998);
-        Socket socket = new Socket();
-        try {
-            socket.connect(socketAddress1);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        try {
-            DataOutputStream out = new DataOutputStream(socket.getOutputStream());
-            out.writeUTF("stop");
-            out.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//
+//        try {
+//            Thread.sleep(60000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+//        System.out.println("准备发送结束");
+//        SocketAddress socketAddress1 = new InetSocketAddress(address,9998);
+//        Socket socket = new Socket();
+//        try {
+//            socket.connect(socketAddress1);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        try {
+//            DataOutputStream out = new DataOutputStream(socket.getOutputStream());
+//            out.writeUTF("stop");
+//            out.close();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
 }

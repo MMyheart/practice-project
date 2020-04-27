@@ -14,6 +14,8 @@
         <module>practice-algorithm</module>
         <module>practice-mybatis</module>
         <module>practice-proxy</module>
+        <module>practice-zk</module>
+        <module>practice-rabbitmq</module>
     </modules>
 
     <properties>
@@ -35,6 +37,9 @@
 
         <junit.version>4.12</junit.version>
         <jmockit.version>1.28</jmockit.version>
+
+        <poi.version>3.9</poi.version>
+        <poi-ooxml.version>3.9</poi-ooxml.version>
     </properties>
 
     <dependencyManagement>
@@ -117,6 +122,18 @@
                 <artifactId>jmockit</artifactId>
                 <version>${jmockit.version}</version>
                 <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi</artifactId>
+                <version>${poi.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml</artifactId>
+                <version>${poi-ooxml.version}</version>
             </dependency>
 
         </dependencies>

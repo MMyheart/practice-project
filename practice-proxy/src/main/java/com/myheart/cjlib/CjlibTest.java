@@ -3,6 +3,8 @@ package com.myheart.cjlib;
 import net.sf.cglib.core.DebuggingClassWriter;
 import net.sf.cglib.proxy.Enhancer;
 
+import java.util.concurrent.CountDownLatch;
+
 /**
  * @author yangxin
  * @date 2019/8/14
@@ -11,7 +13,7 @@ public class CjlibTest {
 
     public static void main(String[] args) {
 
-//        System.setProperty(DebuggingClassWriter.DEBUG_LOCATION_PROPERTY, "/Users/apple/personalRepository/practice-project/practice-proxy/src/main/java/com/myheart/cjlib/proxy");
+        System.setProperty(DebuggingClassWriter.DEBUG_LOCATION_PROPERTY, "/Users/apple/personalRepository/practice-project/practice-proxy/src/main/java/com/myheart/cjlib/proxy");
 
         Person person = new Person();
 
